@@ -18,8 +18,8 @@ class DatabaseAdapter
         return $this->connection->query('select * from ' . $tableName)->fetchAll();
     }
 
-    public function query($sql, $parameters)
+    public function query($sql, $params)
     {
-        return $this->connection->prepare($sql)->execute($parameters);
+        return $this->connection->prepare($sql)->execute($params);
     }
 }
